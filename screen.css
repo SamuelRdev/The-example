@@ -11,9 +11,11 @@ body{
     line-height: 1.625;
     margin:0;
 }
+
 a{
     color:inherit;
     text-decoration: none;
+    transition: color .4s;
 }
 
 header{
@@ -22,6 +24,7 @@ header{
 }
 
 .topbar{
+    padding: 18px 0;
     font-size: .875rem;
     text-transform: uppercase;
     text-align: center;
@@ -30,3 +33,59 @@ header{
 .topbar a:hover{
     color: #C89446;
 }
+
+.logo{
+    margin-bottom: 15px;
+}
+
+.menu-item{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.baseline{
+    padding: 50px 0 70px 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.baseline-welcome{
+    font-family: 'Pinyon Script', 'Serif';
+    color: #C89446;
+    font-size: 2.2rem;
+    display: block;
+}
+
+.baseline-name{
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing:11px;
+    text-transform: uppercase;
+    padding: bottom 10px;
+    display: block;
+}
+
+.baseline-slogan{
+    font-size: 1rem;
+    font-weight:300;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media only screen and(min-width:920px){
+    html{
+        font-size:16px;
+    }
+    .baseline-welcome{
+        font-size: 1.5rem;
+    }
+    .baseline-name{
+
+    }
+    .baseline-slogan{
+
+    }
+}
+
