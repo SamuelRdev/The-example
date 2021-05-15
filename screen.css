@@ -19,7 +19,9 @@ a{
 }
 
 header{
-    background: url(img/eggs.jpg) center center / cover no-repeat;
+    background: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, .5) 39.24%, rgba(28, 28, 28, .4) 100%),
+        url(img/salle.jpg) center center / cover no-repeat;
     color: #FFFF;
 }
 
@@ -36,6 +38,7 @@ header{
 
 .logo{
     margin-bottom: 15px;
+    font-size: 1.25rem;
 }
 
 .menu-item{
@@ -60,7 +63,7 @@ header{
     font-size: 2.5rem;
     line-height: 1;
     font-weight: 700;
-    letter-spacing:11px;
+    letter-spacing:5px;
     text-transform: uppercase;
     padding: bottom 10px;
     display: block;
@@ -74,18 +77,38 @@ header{
     letter-spacing: 2px;
 }
 
-@media only screen and(min-width:920px){
+@media screen and(min-width:920px){
     html{
         font-size:16px;
     }
+    .header{
+        height: 100vh;
+    }
+
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1110px;
+        margin: 0 auto;
+    }  
+
+    .menu-button{
+        border: #C89446 1px solid;
+        padding: 7px 10px;
+    }
+    .baseline{
+        padding: 136px 0 227px;
+    }
+
     .baseline-welcome{
-        font-size: 1.5rem;
+        font-size: 3.75rem;
     }
     .baseline-name{
-
+        font-size: 4.375rem;
+        letter-spacing: 11px;
     }
     .baseline-slogan{
-
+        font-size:1.5rem;
     }
 }
 
