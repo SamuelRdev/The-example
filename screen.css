@@ -25,6 +25,10 @@ header{
     color: #FFFF;
 }
 
+.logo a:hover{
+    color: #FFFF;
+}
+
 .topbar{
     padding: 18px 0;
     font-size: .875rem;
@@ -32,18 +36,18 @@ header{
     text-align: center;
 }
 
-.topbar a:hover{
+.menu-item{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu-link:hover{
     color: #C89446;
 }
 
 .logo{
     margin-bottom: 15px;
     font-size: 1.25rem;
-}
-
-.menu-item{
-    display: inline-block;
-    margin: 0 15px;
 }
 
 .baseline{
@@ -77,38 +81,64 @@ header{
     letter-spacing: 2px;
 }
 
-@media screen and(min-width:920px){
+.menu-button{
+    transition-property: color, background-color;
+    border: #C89446 1px solid;
+    padding: 4px 7px;
+    margin-top: 5px;
+}
+
+.menu-button:hover{
+    color:#FFFF;
+    background: #C89446;    
+}
+
+@media screen and (min-width:600px){
     html{
         font-size:16px;
     }
     .header{
         height: 100vh;
+        overflow: hidden;
+    }
+
+    .logo{
+        margin-bottom: 0;
+    }
+
+    .logo a{
+        font-size: 1.375rem;
     }
 
     .topbar{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         max-width: 1110px;
         margin: 0 auto;
     }  
 
-    .menu-button{
-        border: #C89446 1px solid;
-        padding: 7px 10px;
-    }
     .baseline{
-        padding: 136px 0 227px;
+        padding: 135px 0;
     }
 
     .baseline-welcome{
         font-size: 3.75rem;
     }
+
     .baseline-name{
         font-size: 4.375rem;
-        letter-spacing: 11px;
+        letter-spacing: 12px;
+        padding-top: 8px;
+        padding-bottom: 18px;
     }
+
     .baseline-slogan{
         font-size:1.5rem;
+    }
+
+    .menu-button{
+        margin-top: 0;
     }
 }
 
