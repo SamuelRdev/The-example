@@ -10,12 +10,18 @@ body{
     font-family: 'Source Sans Pro', 'Sans Serif';
     line-height: 1.625;
     margin:0;
+    color: #6F6F6F;
 }
 
 a{
     color:inherit;
     text-decoration: none;
     transition: color .4s;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 header{
@@ -41,7 +47,7 @@ header{
     margin: 0 15px;
 }
 
-.menu-link:hover{
+.menu-item:hover{
     color: #C89446;
 }
 
@@ -90,8 +96,69 @@ header{
 
 .menu-button:hover{
     color:#FFFF;
-    background: #C89446;    
+    background: #C89446; 
+    transition: .6s;   
 }
+
+.container-small{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 960px;
+}
+
+.home-section{
+    padding-top: 20px;
+}
+
+.block{
+    margin-bottom: 50px;
+}
+
+.title{
+    line-height: 1.1;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0 0 0;
+}
+
+.title span{
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    font-size: 2.5rem;
+    display: block;
+    text-transform: none;
+}
+
+.title::before{
+    content:'';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #C89446;
+    margin-bottom: .5rem;
+}
+
+.more{
+    color:#C89446;
+}
+
+.more:hover{
+    text-decoration: underline;
+    color: #C89446;
+}
+
+.more::after{
+    content: '>';
+}
+
+.block-img img{
+    display: block;
+}
+
+
 
 @media screen and (min-width:600px){
     html{
@@ -114,12 +181,12 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1110px;
+        max-width: 1150px;
         margin: 0 auto;
     }  
 
     .baseline{
-        padding: 135px 0;
+        padding: 155px 0;
     }
 
     .baseline-welcome{
@@ -139,6 +206,57 @@ header{
 
     .menu-button{
         margin-top: 0;
+        margin-right: 0;
     }
 }
 
+@media screen and (min-width:960px){
+    .block-left{
+        display: flex;
+        align-items: center;
+    }
+
+    .block-img{
+        position: relative;
+    } 
+
+    .block-img::before{
+        content: '';
+        display: block;
+        border: #C89446 1px solid;
+        position: absolute;
+        top: -25px;
+        left: -30px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .block-img img{
+        position: relative;
+        z-index: 1;
+    }
+
+    .block-left .block-img{
+        width: 350px;
+        flex: none;
+        margin-left: 30px;
+    }
+
+    .block-left .block-body{
+        margin-left: 94px;
+    }
+    
+    .title{
+        margin-bottom: 1.2rem;
+    }
+
+    .title::before{
+        margin-bottom: 28px;
+    }
+
+    .more{
+        display: block;
+        margin-top: 1.2rem;
+    }
+}
