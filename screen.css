@@ -106,6 +106,12 @@ header{
     max-width: 960px;
 }
 
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1110px;
+}
+
 .home-section{
     padding-top: 20px;
 }
@@ -172,6 +178,83 @@ header{
     text-align: center;
 }
 
+.block-centered .block-body{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ingredients-menu{
+    margin: 40px 0;
+    font-weight: 600;
+    color: #383838;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ingredients-menu a{
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+.ingredients-menu a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    opacity: 0;
+    background: #C89446;
+    transition: .3s;
+}
+
+.ingredients-menu a:hover{
+    color: #383838;
+}
+
+.ingredients-menu .active:after, .ingredients-menu a:hover::after{
+    bottom: 0;
+    opacity: 1;
+}
+
+.menu-summary-item{
+    position: relative;
+    padding-left: 120px;
+    margin-bottom: 30px;
+}
+
+.menu-summary-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+.menu-summary-title{
+    font-size: 1.125rem;
+    color: #383838;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0;
+}
+
+.menu-summary p{
+    margin: 0;
+    font-size: 0.875rem;
+    padding-bottom: 1rem;
+}
+
+.menu-summary-price{
+    
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
 @media screen and (min-width:600px){
     html{
         font-size:16px;
@@ -226,6 +309,10 @@ header{
 
     .block{
         margin-bottom: 100px;
+    }
+
+    .block-last{
+        margin-bottom: 60px;
     }
 
     .block-left, .block-right{
@@ -295,6 +382,73 @@ header{
         background: 
             top 95px right 0px url(img/oranges.jpg) no-repeat,
             top 640px left 0px url(img/spices.jpg) no-repeat;
+    }
+
+    .ingredients-menu a{
+        margin: 0 35px;
+    }
+
+    .menu-summary{
+        position: relative;
+        padding: 85px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu-summary-item{
+        padding-left: 192px;
+        margin-bottom: 110px;
+        width: calc(50% - 40px);
+    }
+
+    .menu-summary-item:nth-child(even){
+        text-align: right;
+        padding-left: 0;
+        padding-right: 192px;
+    }
+
+    .menu-summary-item:nth-child(even) .menu-summary-img{
+        left: auto;
+        right: 0;
+    }
+
+    .menu-summary-item:nth-child(even) .menu-summary-price{
+        margin-left: auto;
+    }
+
+    .menu-summary-img{
+        width:  160px;
+    }
+
+    .menu-summary-title{
+        margin-top: 0;
+        line-height: 1.2;
+        background: #FFFF;
+    }
+
+    .menu-summary p{
+        background: #FFFF;
+    }
+
+    .menu-summary-price{
+        padding-top: 4px;
+        width: 85px;
+        background: #FFFF;
+    }
+
+    .menu-summary::before{
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 420px;
+        height: 420px;
+        border: solid 1px #C89446;
+        transform: translate(-50%, -260px) rotate(45deg);
+        
+      
     }
 }
 
